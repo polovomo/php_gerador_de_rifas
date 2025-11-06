@@ -1,5 +1,5 @@
-/* assets/style.css */
-:root {
+ /* assets/style.css */
+ :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
     --primary-light: #60a5fa;
@@ -312,28 +312,28 @@ label {
     color: var(--white);
 }
 
-/* Container de Rifas - DESIGN COMPACTO */
+/* Container de Rifas - NOVO DESIGN BASEADO NA IMAGEM */
 .rifas-section {
     padding: 2rem 0;
 }
 
 .rifas-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
 }
 
 .bilhete {
-    background: linear-gradient(135deg, var(--white) 0%, #f8fafc 100%);
+    background: var(--white);
     border-radius: var(--radius);
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid #e5e7eb;
     position: relative;
     overflow: hidden;
-    min-height: 140px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -357,17 +357,23 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 }
 
 .titulo-rifa {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--dark);
     flex: 1;
     line-height: 1.2;
+}
+
+.subtitulo-rifa {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 0.25rem;
 }
 
 .numero-bilhete {
@@ -383,41 +389,90 @@ label {
     margin-bottom: 0.5rem;
 }
 
-.premio {
-    font-size: 0.8rem;
-    color: var(--gray);
-    line-height: 1.3;
-    margin-bottom: 0.3rem;
+.premio-section {
+    margin-bottom: 1rem;
 }
 
-.premio strong {
+.premio-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.premio {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.3;
+}
+
+.itens-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.itens {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.3;
+}
+
+.dados-comprador {
+    margin: 1rem 0;
+}
+
+.campo-linha {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
     color: var(--dark);
 }
 
+.valor-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
 .valor {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--success);
 }
 
-.valor strong {
-    color: var(--dark);
+.numero-direita {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.data-sorteio {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.outras-informacoes {
+    font-size: 0.9rem;
+    color: var(--gray);
 }
 
 .bilhete-footer {
     margin-top: auto;
+    border-top: 1px dashed #d1d5db;
+    padding-top: 0.75rem;
 }
 
 .recorte {
-    border-top: 1px dashed #d1d5db;
-    padding-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .recorte-titulo {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--gray);
     flex: 1;
@@ -597,12 +652,12 @@ footer p:first-child {
     }
     
     .bilhete {
-        min-height: 120px;
-        padding: 0.8rem;
+        min-height: 200px;
+        padding: 1rem;
     }
     
     .titulo-rifa {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .numero-bilhete {
@@ -610,7 +665,7 @@ footer p:first-child {
     }
     
     .premio {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -649,12 +704,12 @@ footer p:first-child {
         margin: 5px;
         box-shadow: none !important;
         border: 1px solid #000 !important;
-        min-height: 120px;
+        min-height: 200px;
     }
     
     .rifas-container {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(1, 1fr) !important;
         gap: 8px !important;
     }
 }
